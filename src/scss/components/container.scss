@@ -1,0 +1,6 @@
+.container {
+  width: 100%;
+  max-width: map-get($container-max-widths, xl);
+  margin: 0 auto;
+  padding: 0 16px;
+}
