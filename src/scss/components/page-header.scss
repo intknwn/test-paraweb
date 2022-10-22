@@ -1,0 +1,38 @@
+.page-header {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+
+  background: $color-white;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 88px;
+  }
+
+  &__logo {
+    margin-top: 6px;
+  }
+
+  &__email,
+  &__phone {
+    color: $color-text-base;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-decoration: none;
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-right: 40px;
+  }
+}
