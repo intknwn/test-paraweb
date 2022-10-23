@@ -21,6 +21,7 @@
       {
         "empty-line-between-groups": true
       }
-    ]
+    ],
+    "selector-class-pattern": null
   }
 }

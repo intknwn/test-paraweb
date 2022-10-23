@@ -1,0 +1,129 @@
+.carousel {
+  position: relative;
+
+  padding-top: 88px;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding-top: 72px;
+  }
+
+  &__item {
+    min-height: 546px;
+
+    padding-top: 100px;
+    padding-bottom: 181px;
+    padding-left: 137px;
+
+    background-image: url("../images/developer@1x.png"), $gradient-carousel-main;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom 0 right 0, top 0 left 0;
+    background-size: contain, cover;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      min-height: 365px;
+
+      padding-top: 20px;
+      padding-bottom: 163px;
+      padding-left: 16px;
+
+      background-image: url("../images/developer-mobile@2x.png"), $gradient-carousel-main;
+      background-repeat: no-repeat, repeat;
+      background-size: cover, cover;
+    }
+  }
+
+  &__item-heading {
+    max-width: 574px;
+    margin-bottom: 22px;
+
+    color: $color-white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      max-width: 340px;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__item-description {
+    max-width: 513px;
+    margin-bottom: 31px;
+
+    color: $color-white;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      max-width: 340px;
+      margin-bottom: 23px;
+
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__more-button {
+    display: block;
+
+    width: 162px;
+    height: 52px;
+
+    color: $color-text-button;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 52px;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $color-white;
+    border-radius: 10px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 134px;
+      height: 45px;
+
+      font-size: 14px;
+      line-height: 45px;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 64px;
+    left: 138px;
+
+    display: flex;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      bottom: 20px;
+      left: 16px;
+    }
+  }
+
+  &__dot {
+    display: inherit;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: rgba(0 0 0 / 30%);
+    border-radius: 2px;
+
+    &--active {
+      background-color: $color-white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 20px;
+    }
+  }
+}
