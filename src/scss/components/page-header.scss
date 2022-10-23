@@ -12,10 +12,27 @@
     justify-content: space-between;
 
     height: 88px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      height: 56px;
+    }
   }
 
   &__logo {
     margin-top: 6px;
+
+    svg {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        width: 96px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      display: flex;
+    }
   }
 
   &__email,
@@ -29,10 +46,26 @@
 
     svg {
       display: none;
+
+      fill: $color-text-base;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: inherit;
+      }
+    }
+
+    span {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: none;
+      }
     }
   }
 
   &__phone {
     margin-right: 40px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      margin-right: 16px;
+    }
   }
 }
