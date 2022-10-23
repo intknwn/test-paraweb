@@ -1,0 +1,82 @@
+.carousel {
+  position: relative;
+
+  padding-top: 88px;
+
+  &__item {
+    min-height: 546px;
+
+    padding-top: 100px;
+    padding-bottom: 181px;
+    padding-left: 137px;
+
+    background: url("../images/developer@1x.png"), $gradient-carousel-main;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom 0 right 0, top 0 left 0;
+    background-size: contain, cover;
+  }
+
+  &__item-heading {
+    max-width: 574px;
+    margin-bottom: 22px;
+
+    color: $color-white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+
+    hyphens: none;
+  }
+
+  &__item-description {
+    max-width: 513px;
+    margin-bottom: 31px;
+
+    color: $color-white;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__more-button {
+    display: block;
+
+    width: 162px;
+    height: 52px;
+
+    color: $color-text-button;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 52px;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: $color-white;
+    border-radius: 10px;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 64px;
+    left: 138px;
+
+    display: flex;
+  }
+
+  &__dot {
+    display: inherit;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: rgba(0 0 0 / 30%);
+
+    &--active {
+      background-color: $color-white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+}
