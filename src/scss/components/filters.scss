@@ -1,13 +1,38 @@
 .filters {
-  display: flex;
-  justify-content: space-between;
-  max-width: 691px;
-  padding: 40px 0;
+  background-color: $color-bg-base;
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
-    flex-direction: column;
-    max-width: unset;
-    padding: 31px 0;
+  &--sticky {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      left: 0;
+
+      padding: 0 16px;
+    }
+
+    & + .articles__list {
+      margin-top: 132px;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        margin-top: 180px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 691px;
+    padding: 40px 0;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex-direction: column;
+      max-width: unset;
+      padding: 31px 0;
+    }
   }
 
   &__input-author,
@@ -26,7 +51,8 @@
 
     appearance: none;
 
-    &:focus {
+    &:focus,
+    &:valid {
       & + label {
         display: none;
       }
@@ -36,16 +62,11 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
-    }
 
-    &:valid {
-      & + label {
-        display: none;
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: 14px;
+        line-height: 17px;
       }
-
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20px;
     }
   }
 
