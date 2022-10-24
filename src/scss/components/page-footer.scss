@@ -5,6 +5,23 @@
 
   background-color: $color-bg-footer;
 
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding: 24px 0;
+  }
+
+  &__logo {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      margin-bottom: 25px;
+    }
+
+    svg {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        width: 128px;
+        height: 32px;
+      }
+    }
+  }
+
   &__line-wrapper {
     display: flex;
     justify-content: space-between;
@@ -12,6 +29,31 @@
     &--top {
       align-items: center;
       margin-bottom: 58px;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        align-items: flex-start;
+        margin-bottom: 18px;
+      }
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &--bottom {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__links-wrapper {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      max-height: 65px;
     }
   }
 
@@ -23,19 +65,38 @@
 
     text-decoration: none;
 
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
     &:not(:last-child) {
       margin-right: 48px;
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        margin-right: 40px;
+        margin-bottom: 15px;
+      }
     }
+
   }
 
   &__copyright {
     color: $color-copyright;
     font-size: 14px;
     line-height: 20px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__social-list {
     display: flex;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      margin-bottom: 14px;
+    }
   }
 
   &__social-item {
