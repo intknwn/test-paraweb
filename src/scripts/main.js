@@ -4,8 +4,10 @@ import lazyImages from './modules/lazyimages';
 import createArticles from './modules/articles';
 import makeFiltersStickOnScroll from './modules/sticky-filters';
 
+import initCarousel from './modules/carousel';
+
 onDocumentReady(() => {
   lazyImages();
   createArticles();
-  makeFiltersStickOnScroll();
+  initCarousel(makeFiltersStickOnScroll);
 });
