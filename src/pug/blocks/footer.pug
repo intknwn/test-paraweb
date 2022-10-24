@@ -1,1 +1,25 @@
-p А это футер
+footer.page-footer
+  .container
+    .page-footer__line-wrapper.page-footer__line-wrapper--top
+      a.page-header__logo(href="", aria-label="Логотип компании")
+        +icon-mono("logo")(width="193", height="48", alt="Логотип компании Space")
+      .page-footer__links-wrapper
+        a.page-footer__link(href="#") Готовые решения
+        a.page-footer__link(href="#") О нас
+        a.page-footer__link(href="#") Блог
+        a.page-footer__link(href="#") Контакты
+    .page-footer__line-wrapper.page-footer__line-wrapper--bottom
+      p.page-footer__copyright © ООО «Лого», 2008—2022
+      ul.page-footer__social-list
+        li.page-footer__social-item
+          a.page-footer__social-link(href="#")
+            +icon-mono("telegram")(width="20", height="20")
+        li.page-footer__social-item
+          a.page-footer__social-link(href="#")
+            +icon-mono("vk")(width="20", height="20")
+        li.page-footer__social-item
+          a.page-footer__social-link(href="#")
+            +icon-mono("twitter")(width="20", height="20")
+        li.page-footer__social-item
+          a.page-footer__social-link(href="#")
+            +icon-mono("youtube")(width="20", height="20")
