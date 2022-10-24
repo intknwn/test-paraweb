@@ -1,0 +1,52 @@
+.article {
+  flex: 1 1 572px;
+  min-width: 300px;
+  padding: 24px;
+
+  background-color: $color-white;
+  border-radius: 20px;
+
+  &__date {
+    display: block;
+    margin-bottom: 8px;
+
+    color: $color-date;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+
+    color: $color-heading;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__description {
+    max-height: 72px;
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__author {
+    padding: 8px 20px;
+
+    color: $color-text-button;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+
+    background-color: $color-bg-button;
+    border: none;
+    border-radius: 10px;
+  }
+
+
+}

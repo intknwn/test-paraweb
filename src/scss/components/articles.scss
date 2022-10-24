@@ -1,0 +1,9 @@
+.articles {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding-top: 16px;
+  }
+}
