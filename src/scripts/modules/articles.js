@@ -34,11 +34,11 @@ const createArticleTemplate = (data) => {
   return `
     <li class="article">
       <time class="article__date" datetime="${publishedAt}">${date}</time>
-      <h3 class="article__heading">${title}</h3>
+      <a class="article__link" href="#"><h3 class="article__heading">${title}</h3></a>
       <p class="article__description">${desc}</p>
       ${
         author
-          ? `<button class="article__author" type="button">${author}</button>`
+          ? `<span class="article__author" type="button">${author}</button>`
           : ``
       }
     </li>
