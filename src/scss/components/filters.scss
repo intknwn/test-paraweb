@@ -1,0 +1,207 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  max-width: 691px;
+  padding: 40px 0;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    flex-direction: column;
+    max-width: unset;
+    padding: 31px 0;
+  }
+
+  &__input-author,
+  &__input-date-from,
+  &__input-date-to {
+    height: 52px;
+    padding: 16px;
+
+    color: $color-text-base;
+    font-size: 0;
+    line-height: 0;
+
+    background-color: $color-white;
+    border: none;
+    border-radius: 10px;
+
+    appearance: none;
+
+    &:focus {
+      & + label {
+        display: none;
+      }
+
+      left: 46px;
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:valid {
+      & + label {
+        display: none;
+      }
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__input-author {
+    width: 335px;
+
+    padding-left: 46px;
+
+    &:focus {
+      left: 46px;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 100%;
+    }
+  }
+
+  &__author-option {
+    left: 0;
+
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__input-date-from,
+  &__input-date-to {
+    width: 158px;
+
+    & + label {
+      left: 16px;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 100%;
+    }
+  }
+
+  &__input-date-to {
+    & + label {
+      left: 10px;
+    }
+  }
+
+
+  &__input-wrapper {
+    position: relative;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex: 1 0 48%;
+      max-width: 48%;
+    }
+
+    &--author {
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        max-width: 100%;
+        margin-bottom: 14px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+
+        display: block;
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("../images/person.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+
+        transform: translateY(-50%);
+
+        content: "";
+
+        pointer-events: none;
+      }
+
+      &::after {
+        right: 16px;
+        left: unset;
+
+        background-image: url("../images/chevron.svg");
+        background-size: 15px 8px;
+      }
+
+      &:focus-within {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__input-group {
+    display: flex;
+
+    background-color: $color-white;
+
+    border-radius: 10px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 46px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    transform: translateY(-50%);
+
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__input-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 100%;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex: 1 0 4%;
+      width: unset;
+    }
+
+    &::before {
+      display: block;
+      width: 10px;
+      height: 2px;
+
+      background-color: $color-text-base;
+
+      border: none;
+      border-radius: 2px;
+
+      content: "";
+    }
+  }
+}
