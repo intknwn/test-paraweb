@@ -67,6 +67,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "flickity": "^3.0.0",
     "focus-visible": "^5.2.0",
     "normalize.css": "^8.0.1",
     "vanilla-lazyload": "^17.5.0"
