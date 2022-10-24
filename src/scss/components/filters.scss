@@ -4,6 +4,12 @@
   max-width: 691px;
   padding: 40px 0;
 
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    flex-direction: column;
+    max-width: unset;
+    padding: 31px 0;
+  }
+
   &__input-author,
   &__input-date-from,
   &__input-date-to {
@@ -43,6 +49,20 @@
     }
   }
 
+  &__input-author {
+    width: 335px;
+
+    padding-left: 46px;
+
+    &:focus {
+      left: 46px;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 100%;
+    }
+  }
+
   &__author-option {
     left: 0;
 
@@ -53,22 +73,16 @@
     line-height: 20px;
   }
 
-  &__input-author {
-    width: 335px;
-
-    padding-left: 46px;
-
-    &:focus {
-      left: 46px;
-    }
-  }
-
   &__input-date-from,
   &__input-date-to {
     width: 158px;
 
     & + label {
       left: 16px;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 100%;
     }
   }
 
@@ -82,7 +96,18 @@
   &__input-wrapper {
     position: relative;
 
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex: 1 0 48%;
+      max-width: 48%;
+    }
+
     &--author {
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        max-width: 100%;
+        margin-bottom: 14px;
+      }
+
       &::before,
       &::after {
         position: absolute;
@@ -128,6 +153,11 @@
     background-color: $color-white;
 
     border-radius: 10px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__label {
@@ -149,6 +179,11 @@
 
     width: 20px;
     height: 100%;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      flex: 1 0 4%;
+      width: unset;
+    }
 
     &::before {
       display: block;
