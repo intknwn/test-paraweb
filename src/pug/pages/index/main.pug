@@ -13,18 +13,19 @@ section.articles
   h2.visually-hidden Список статей
   .container
     .filters
-      .filters__input-wrapper.filters__input-wrapper--author
-        select.filters__input-author(id="author", name="author", required)
-          option.filters__author-option(value="") Все авторы
-        label.filters__label(for="author") Выбор автора
-      .filters__input-group
-        .filters__input-wrapper
-          input.filters__input-date-from(id="date-from", name="date-from", type="date", placeholder="От", required, onkeydown="return false")
-          label.filters__label(for="date-from") От
-        span.filters__input-separator
-        .filters__input-wrapper
-          input.filters__input-date-to(id="date-to", name="date-to", type="date", required, onkeydown="return false")
-          label.filters__label(for="date-to") До
+      .filters__wrapper
+        .filters__input-wrapper.filters__input-wrapper--author
+          select.filters__input-author(id="author", name="author", required)
+            option.filters__author-option(value="") Все авторы
+          label.filters__label(for="author") Выбор автора
+        .filters__input-group
+          .filters__input-wrapper
+            input.filters__input-date-from(id="date-from", name="date-from", type="date", placeholder="От", required, onkeydown="return false")
+            label.filters__label(for="date-from") От
+          span.filters__input-separator
+          .filters__input-wrapper
+            input.filters__input-date-to(id="date-to", name="date-to", type="date", required, onkeydown="return false")
+            label.filters__label(for="date-to") До
     ul.articles__list
       li.articles__list-item.article
         time.article__date(datetime="") 12 июня 2022
