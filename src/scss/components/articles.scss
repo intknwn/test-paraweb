@@ -5,5 +5,12 @@
     gap: 20px;
 
     padding-top: 16px;
+    padding-bottom: 80px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      gap: 16px;
+      padding-top: 0;
+      padding-bottom: 56px;
+    }
   }
 }

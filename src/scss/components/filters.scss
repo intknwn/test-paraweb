@@ -170,6 +170,12 @@
     line-height: 20px;
 
     transform: translateY(-50%);
+
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__input-separator {
