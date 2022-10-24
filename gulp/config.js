@@ -9,7 +9,8 @@ const config = {
     pug: `${SRC_PATH}/pug`,
     fonts: `${SRC_PATH}/assets/fonts`,
     images: `${SRC_PATH}/assets/images`,
-    icons: `${SRC_PATH}/assets/icons`,
+    iconsMono: `${SRC_PATH}/assets/icons/mono`,
+    iconsMulti: `${SRC_PATH}/assets/icons/multi`,
   },
   dest: {
     root: DEST_PATH,

@@ -12,21 +12,21 @@ const spriteMono = () =>
             sprite: '../sprites/sprite-mono.svg',
           },
         },
-        shape: {
-          transform: [
-            {
-              svgo: {
-                plugins: [
-                  {
-                    removeAttrs: {
-                      attrs: ['class', 'data-name', 'fill', 'stroke.*'],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
+        // shape: {
+        //   transform: [
+        //     {
+        //       svgo: {
+        //         plugins: [
+        //           {
+        //             removeAttrs: {
+        //               attrs: ['class', 'data-name', 'fill', 'stroke.*'],
+        //             },
+        //           },
+        //         ],
+        //       },
+        //     },
+        //   ],
+        // },
       }),
     )
     .pipe(gulp.dest(config.dest.images));

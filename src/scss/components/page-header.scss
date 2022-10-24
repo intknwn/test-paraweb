@@ -1,0 +1,73 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+
+  background: $color-white;
+
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 88px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      height: 56px;
+    }
+  }
+
+  &__logo {
+    margin-top: 6px;
+
+    svg {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        width: 96px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      display: flex;
+    }
+  }
+
+  &__email,
+  &__phone {
+    color: $color-text-base;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-decoration: none;
+
+    svg {
+      display: none;
+
+      fill: $color-text-base;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: inherit;
+      }
+    }
+
+    span {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: none;
+      }
+    }
+  }
+
+  &__phone {
+    margin-right: 40px;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      margin-right: 16px;
+    }
+  }
+}

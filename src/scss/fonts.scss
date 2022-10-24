@@ -1,1 +1,3 @@
-// @include font-face(%fontname%, "../assets/fonts/%fontname%", 700, normal, eot woff woff2 ttf);
+@include font-face("Montserrat", "../fonts/montserrat-v25-latin_cyrillic-regular", 400, normal, woff woff2);
+@include font-face("Montserrat", "../fonts/montserrat-v25-latin_cyrillic-500", 500, normal, woff woff2);
+@include font-face("Montserrat", "../fonts/montserrat-v25-latin_cyrillic-600", 600, normal, woff woff2);
